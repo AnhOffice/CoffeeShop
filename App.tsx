@@ -10,10 +10,13 @@ import { LanguageProvider } from './context/LanguageContext.tsx';
 import { ThemeProvider } from './context/ThemeContext.tsx';
 
 const App: React.FC = () => {
+  // Basename for GitHub Pages - only in production
+  const basename = import.meta.env.MODE === 'production' ? '/CoffeeShop' : '';
+  
   return (
     <ThemeProvider>
       <LanguageProvider>
-      <Router>
+      <Router basename={basename}>
         <div className="min-h-screen custom-scrollbar">
           <Navbar />
           <main>
