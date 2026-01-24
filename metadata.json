@@ -1,0 +1,7 @@
+{
+  "name": "Coffee Cycle Studio",
+  "description": "A premium, eco-friendly landing page for a brand that upcycles coffee grounds into high-end lifestyle products.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
