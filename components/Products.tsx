@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import MotionWrapper from './MotionWrapper.tsx';
 import { DATA } from '../constants.tsx';
 import { useLanguage } from '../context/LanguageContext.tsx';
@@ -7,6 +7,7 @@ import { ArrowRight, ShoppingCart } from 'lucide-react';
 
 const Products: React.FC = () => {
   const { language } = useLanguage();
+  const navigate = useNavigate();
   const content = DATA[language].ui.products;
   const products = DATA[language].products;
 
@@ -23,7 +24,9 @@ const Products: React.FC = () => {
             </p>
           </MotionWrapper>
           <MotionWrapper delay={200}>
-            <button className="flex items-center gap-2 text-sm font-bold uppercase tracking-wide px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg"
+            <button 
+              onClick={() => navigate('/products')}
+              className="flex items-center gap-2 text-sm font-bold uppercase tracking-wide px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg"
               style={{
                 color: '#2E7D32',
                 border: '2px solid #2E7D32'

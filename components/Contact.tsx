@@ -52,8 +52,7 @@ const Contact: React.FC = () => {
                     {content.visit}
                   </h4>
                   <p className="text-sm" style={{ color: '#6D4C41' }}>
-                    123 Sustainability Street<br />
-                    Green District, Eco City
+                    {content.address}
                   </p>
                 </div>
               </div>
@@ -85,7 +84,7 @@ const Contact: React.FC = () => {
                     Email
                   </h4>
                   <p className="text-sm" style={{ color: '#6D4C41' }}>
-                    hello@coffeecycle.studio
+                    coffeeform2026@gmail.com
                   </p>
                 </div>
               </div>

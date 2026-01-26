@@ -29,7 +29,7 @@ export const DATA = {
     products: [
       {
         id: '1',
-        name: 'The Last Drop Tray',
+        name: 'Khay The Last Drop',
         description: 'A sculptural serving piece crafted from compressed espresso grounds.',
         price: '1.600.000₫',
         image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&q=80&w=800',
@@ -37,7 +37,7 @@ export const DATA = {
       },
       {
         id: '2',
-        name: 'Mini Eco Planter',
+        name: 'Chậu Cây Mini Eco',
         description: 'Organic textures for your favorite succulents, moisture-wicking by nature.',
         price: '800.000₫',
         image: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&q=80&w=800',
@@ -45,7 +45,7 @@ export const DATA = {
       },
       {
         id: '3',
-        name: 'First Sip Pen Holder',
+        name: 'Hộp Đựng Bút First Sip',
         description: 'Minimalist desk organization with a subtle aroma of roasted beans.',
         price: '700.000₫',
         image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&q=80&w=800',
@@ -55,38 +55,38 @@ export const DATA = {
     team: [
       {
         id: '1',
-        name: 'Elias Thorne',
-        role: 'Master Artisan',
-        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400',
-        bio: 'Dedicated to the alchemy of transforming organic waste into structural art.'
+        name: 'Văn Quế Hương',
+        role: 'Chief Executive Officer',
+        image: '/images/team/QueHuong.jpg',
+        bio: 'Responsible for managing and organizing overall project operations. Supports team members, monitors work progress, and ensures tasks are executed according to the established plan.'
       },
       {
         id: '2',
-        name: 'Sarah Chen',
-        role: 'Eco Designer',
-        image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400',
-        bio: 'Finding the intersection between modern minimalism and natural textures.'
+        name: 'Trần Thị Tuyết Mai',
+        role: 'Product Director',
+        image: '/images/team/TuyetMai.jpg',
+        bio: 'Responsible for building and refining project products. Participates in monitoring implementation process, evaluating and proposing adjustments to ensure products meet user needs.'
       },
       {
         id: '3',
-        name: 'Marcus Bell',
-        role: 'Lead Alchemist',
-        image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400',
-        bio: 'Perfecting the proprietary resin-free binding process for coffee grounds.'
+        name: 'Nguyễn Thị Phương Nghi',
+        role: 'Marketing Director',
+        image: '/images/team/PhuongNghi.jpg',
+        bio: 'Responsible for developing and implementing communication activities for the project. Creates content ideas, manages communication channels and supports brand image promotion.'
       },
       {
         id: '4',
-        name: 'Luna Martinez',
-        role: 'Sustainability Director',
-        image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=400',
-        bio: 'Leading our zero-waste mission and partnerships with local coffee shops.'
+        name: 'Trần Thị Mỹ Hiền',
+        role: 'Business Director',
+        image: '/images/team/MyHien.jpg',
+        bio: 'Responsible for market research and customer connection support. Monitors business performance and proposes improvement solutions aligned with team objectives.'
       },
       {
         id: '5',
-        name: 'James Kim',
-        role: 'Creative Director',
-        image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400',
-        bio: 'Crafting the visual story behind every recycled piece and our brand identity.'
+        name: 'Lương Thị Tố Tố',
+        role: 'Finance Director',
+        image: '/images/team/ToTo.jpg',
+        bio: 'Responsible for budget management, cost monitoring and financial planning support for the project. Ensures that revenues and expenses are controlled and used appropriately.'
       }
     ],
     blog: [
@@ -159,6 +159,22 @@ export const DATA = {
 
         **The Impact**
         Today, Coffee Cycle Studio has diverted over 5 tons of coffee waste from landfills. Each product you buy prevents hundreds of grams of potential methane emissions. We are not just making decor; we are reimagining the lifecycle of our daily habits.`
+      },
+      {
+        id: '4',
+        title: 'Workshop Spotlight: Coffee Ground Candles',
+        excerpt: 'Join our latest crafting session where we transform spent grounds into aromatic, eco-friendly candles for your home.',
+        date: 'Jan 10, 2024',
+        image: 'https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&q=80&w=800',
+        content: `Making candles from coffee grounds is not just about recycling; it's about creating an atmosphere. The natural oils in coffee combined with soy wax create a warm, comforting scent that requires no artificial fragrances.
+
+        **Why Coffee Candles?**
+        1. **Natural Scent**: The aroma of roasted coffee is known to cleanse the palate and sharpen the mind.
+        2. **Aesthetic Appeal**: The layers of dark grounds against creamy wax create a beautiful, rustic look.
+        3. **Eco-Friendly**: We use 100% soy wax and reclaimed grounds, making these candles strictly vegan and biodegradable.
+
+        **Join Our Next Workshop**
+        We hold monthly workshops at our studio where you can bring your own jar and learn the art of candle pouring. It's a perfect weekend activity for families and couples looking to disconnect and make something with their hands.`
       }
     ],
     ui: {
@@ -170,11 +186,20 @@ export const DATA = {
         cta_story: 'Our Story'
       },
       about: {
-        quote: '"Every end is a new beginning."',
+        quote: '"There are things in life discarded not because they are worthless, but because no one saw their value in time."',
         philosophy: 'Our Philosophy',
-        title: 'Coffee is More Than a Drink',
-        p1: 'Every day, tons of coffee grounds are sent to landfills. We see potential: a raw material with rich textures, natural colors, and nostalgic aroma.',
-        p2: 'At Coffee Cycle Studio, we collect grounds from local cafes and turn them into durable, aesthetic home goods.',
+        title: 'COFFEEFORM – From Cup to Corner',
+        story: [
+          'Every day, after bringing joy in morning coffees, kilograms of coffee grounds quietly end their journey in the trash — unremembered, unkept.',
+          'COFFEEFORM started from the moment five female students stood in front of those bags of coffee grounds and wondered: "Why must the memory of coffee end here?"',
+          'No capital. No business experience. No factory.',
+          'We only had clumsy hands and a very simple belief: everything deserves a second chance.',
+          'We went to each coffee shop to collect discarded grounds. Washing, drying, grinding, and mixing each batch by hand. We poured every mold, sanded every edge, accepting even the cracks — for they are traces of a saved journey, not defects.',
+          'From seemingly useless things, pen pots, jewelry trays, and small planters gradually came to life. Each product bears the natural brown color of coffee, no surface alike, holding within a past once forgotten.',
+          'COFFEEFORM does not merely create products. We keep the memory of coffee and give it a new life in your living space.',
+          'When you hold a COFFEEFORM product, it is not just a decor item. It is a piece of coffee once abandoned — kept by you, given life by you once more.',
+          'COFFEEFORM does not want to change the world. We just want to change how you look at small things — from a morning coffee to a small corner in your life.'
+        ],
         feature1_title: '100% Natural',
         feature1_desc: 'Fully biodegradable, plastic-free.',
         feature2_title: 'Handcrafted',
@@ -206,10 +231,27 @@ export const DATA = {
         name: 'Full Name',
         email: 'Email',
         message: 'Message',
-        submit: 'Send Message'
+        submit: 'Send Message',
+        address: 'No. 600, Nguyen Van Cu Street (Extended), An Binh Ward, Can Tho City'
       },
       footer: {
-        rights: '© 2024 Coffee Cycle Studio. All rights reserved.'
+        rights: '© 2024 Coffee Form. All rights reserved.',
+        brand_desc: 'Transforming coffee waste into sustainable art pieces since 2024.',
+        quick_links: 'Quick Links',
+        resources: {
+          title: 'Resources',
+          story: 'Our Story',
+          sustainability: 'Sustainability',
+          blog: 'Blog',
+          faqs: 'FAQs'
+        },
+        newsletter: {
+          title: 'Stay Updated',
+          desc: 'Subscribe to our newsletter for eco-tips and updates.',
+          placeholder: 'Your email'
+        },
+        privacy: 'Privacy Policy',
+        terms: 'Terms of Service'
       },
       product_detail: {
         not_found: 'Product Not Found',
@@ -235,7 +277,15 @@ export const DATA = {
           address: 'Shipping Address',
           address_placeholder: '123 Coffee Street...'
         }
-      }
+      },
+      all_products: {
+          title: 'Our Collection',
+          subtitle: 'Sustainable designs for your sustainable life',
+          filter_all: 'All',
+          filter_new: 'New Arrival',
+          filter_best: 'Best Seller',
+          load_more: 'Load More'
+        }
     }
   },
   vn: {
@@ -276,38 +326,38 @@ export const DATA = {
     team: [
       {
         id: '1',
-        name: 'Elias Thorne',
-        role: 'Nghệ Nhân Chính',
-        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400',
-        bio: 'Tận tâm với nghệ thuật biến chất thải hữu cơ thành các tác phẩm nghệ thuật có cấu trúc.'
+        name: 'Văn Quế Hương',
+        role: 'GIÁM ĐỐC ĐIỀU HÀNH',
+        image: '/images/team/QueHuong.jpg',
+        bio: 'Phụ trách điều hành và tổ chức hoạt động chung của dự án. Hỗ trợ các thành viên trong nhóm, theo dõi tiến độ công việc và đảm bảo các nhiệm vụ được thực hiện đúng kế hoạch đã đề ra.'
       },
       {
         id: '2',
-        name: 'Sarah Chen',
-        role: 'Nhà Thiết Kế Eco',
-        image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400',
-        bio: 'Tìm kiếm sự giao thoa giữa chủ nghĩa tối giản hiện đại và kết cấu tự nhiên.'
+        name: 'Trần Thị Tuyết Mai',
+        role: 'GIÁM ĐỐC SẢN PHẨM',
+        image: '/images/team/TuyetMai.jpg',
+        bio: 'Phụ trách xây dựng và hoàn thiện sản phẩm của dự án. Tham gia theo dõi quá trình thực hiện, đánh giá và đề xuất điều chỉnh để sản phẩm phù hợp với nhu cầu sử dụng.'
       },
       {
         id: '3',
-        name: 'Marcus Bell',
-        role: 'Nhà Giả Kim',
-        image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400',
-        bio: 'Hoàn thiện quy trình kết dính không nhựa độc quyền cho bã cà phê.'
+        name: 'Nguyễn Thị Phương Nghi',
+        role: 'GIÁM ĐỐC TIẾP THỊ',
+        image: '/images/team/PhuongNghi.jpg',
+        bio: 'Phụ trách xây dựng và triển khai các hoạt động truyền thông cho dự án. Lên ý tưởng nội dung, quản lý các kênh truyền thông và hỗ trợ quảng bá hình ảnh thương hiệu.'
       },
       {
         id: '4',
-        name: 'Luna Martinez',
-        role: 'Giám Đốc Bền Vững',
-        image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=400',
-        bio: 'Dẫn dắt sứ mệnh không rác thải và xây dựng quan hệ đối tác với các quán cà phê địa phương.'
+        name: 'Trần Thị Mỹ Hiền',
+        role: 'GIÁM ĐỐC KINH DOANH',
+        image: '/images/team/MyHien.jpg',
+        bio: 'Phụ trách nghiên cứu thị trường và hỗ trợ kết nối khách hàng, theo dõi hiệu quả hoạt động kinh doanh và đề xuất giải pháp cải thiện phù hợp với mục tiêu của nhóm.'
       },
       {
         id: '5',
-        name: 'James Kim',
-        role: 'Giám Đốc Sáng Tạo',
-        image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400',
-        bio: 'Kiến tạo câu chuyện hình ảnh đằng sau mỗi sản phẩm tái chế và bản sắc thương hiệu.'
+        name: 'Lương Thị Tố Tố',
+        role: 'GIÁM ĐỐC TÀI CHÍNH',
+        image: '/images/team/ToTo.jpg',
+        bio: 'Phụ trách quản lý ngân sách, theo dõi chi phí và hỗ trợ lập kế hoạch tài chính cho dự án. Đảm bảo các khoản thu chi được kiểm soát và sử dụng hợp lý.'
       }
     ],
     blog: [
@@ -380,6 +430,22 @@ export const DATA = {
 
         **Tác Động**
         Đến nay, Coffee Cycle Studio đã vinh dự chuyển hướng hơn 5 tấn bã cà phê khỏi các bãi chôn lấp. Mỗi sản phẩm bạn cầm trên tay không chỉ là một món đồ trang trí, mà là một lời cam kết về tương lai bền vững của chúng ta.`
+      },
+      {
+        id: '4',
+        title: 'Tiêu điểm Workshop: Nến Thơm Từ Bã Cà Phê',
+        excerpt: 'Tham gia buổi thủ công mới nhất của chúng tôi, nơi chúng ta biến bã cà phê thành những lọ nến thơm sinh thái cho ngôi nhà của bạn.',
+        date: '10 Tháng 1, 2024',
+        image: 'https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&q=80&w=800',
+        content: `Làm nến từ bã cà phê không chỉ là tái chế; đó là việc kiến tạo một bầu không khí. Tinh dầu tự nhiên trong cà phê kết hợp với sáp đậu nành tạo nên một hương thơm ấm áp, dễ chịu mà không cần bất kỳ hương liệu nhân tạo nào.
+
+        **Tại Sao Là Nến Cà Phê?**
+        1. **Hương Thơm Tự Nhiên**: Mùi hương của cà phê rang được biết đến với khả năng làm sạch khứu giác và giúp tinh thần tỉnh táo.
+        2. **Vẻ Đẹp Mộc Mạc**: Những lớp bã cà phê sẫm màu xen kẽ với sáp trắng kem tạo nên một vẻ đẹp mộc mạc, đầy nghệ thuật.
+        3. **Thân Thiện Môi Trường**: Chúng tôi sử dụng 100% sáp đậu nành và bã cà phê thu gom, làm cho những cây nến này hoàn toàn thuần chay và tự phân hủy.
+
+        **Đăng Ký Workshop**
+        Chúng tôi tổ chức các buổi workshop hàng tháng tại studio. Hãy mang theo chiếc lọ thủy tinh cũ của bạn và học nghệ thuật đổ nến. Đây là hoạt động cuối tuần hoàn hảo cho gia đình và các cặp đôi muốn "sống chậm" và tự tay làm ra những món đồ ý nghĩa.`
       }
     ],
     ui: {
@@ -391,11 +457,20 @@ export const DATA = {
         cta_story: 'Câu Chuyện Của Chúng Tôi'
       },
       about: {
-        quote: '"Mọi kết thúc đều là một khởi đầu mới."',
+        quote: '"Có những thứ trong cuộc sống bị bỏ đi không phải vì chúng vô giá trị, mà vì không ai kịp nhìn thấy giá trị của chúng."',
         philosophy: 'Triết Lý Của Chúng Tôi',
-        title: 'Cà Phê Không Chỉ Là Đồ Uống',
-        p1: 'Hàng ngày, tấn bã cà phê được gửi đến các bãi rác, nơi chúng thải ra khí methane gây hại. Chúng tôi nhìn thấy một tiềm năng khác: một vật liệu thô với kết cấu phong phú, màu sắc tự nhiên và hương thơm đầy hoài niệm.',
-        p2: 'Tại Coffee Cycle Studio, chúng tôi thu gom bã cà phê từ các quán cà phê địa phương và biến chúng thành những vật dụng gia đình bền bỉ, thẩm mỹ.',
+        title: 'COFFEEFORM – From Cup to Corner',
+        story: [
+          'Mỗi ngày, sau khi mang lại niềm vui trong những ly cà phê buổi sáng, hàng ký bã cà phê lặng lẽ kết thúc hành trình của mình trong thùng rác — không được nhớ đến, không được giữ lại.',
+          'COFFEEFORM bắt đầu từ khoảnh khắc năm cô gái sinh viên đứng trước những túi bã cà phê ấy và tự hỏi: "Tại sao ký ức của cà phê lại phải kết thúc ở đây?"',
+          'Không vốn. Không kinh nghiệm kinh doanh. Không nhà xưởng.',
+          'Chúng tôi chỉ có những đôi tay còn vụng về và một niềm tin rất giản dị: mọi thứ đều xứng đáng có một cơ hội thứ hai.',
+          'Chúng tôi đi từng quán cà phê để xin lại những túi bã bị bỏ đi. Rửa sạch, sấy khô, nghiền mịn và trộn từng mẻ vật liệu bằng tay. Chúng tôi đổ từng khuôn, mài từng cạnh, chấp nhận cả những vết nứt — bởi đó là dấu vết của một hành trình được cứu sống, không phải là khuyết điểm.',
+          'Từ những thứ tưởng chừng vô dụng ấy, những chiếc chậu bút, khay trang sức, chậu hoa nhỏ dần ra đời. Mỗi sản phẩm mang màu nâu tự nhiên của cà phê, bề mặt không cái nào giống cái nào, và trong mình một quá khứ đã từng bị lãng quên.',
+          'COFFEEFORM không đơn thuần tạo ra sản phẩm. Chúng tôi giữ lại ký ức của cà phê và trao cho nó một cuộc đời mới trong không gian sống của bạn.',
+          'Khi bạn cầm trên tay một sản phẩm COFFEEFORM, đó không chỉ là một món đồ decor. Đó là một phần cà phê từng bị bỏ rơi — được bạn giữ lại, được bạn cho sống thêm một lần nữa.',
+          'COFFEEFORM không muốn thay đổi thế giới. Chúng tôi chỉ muốn thay đổi cách bạn nhìn vào những điều nhỏ bé — từ một ly cà phê buổi sáng, đến một góc nhỏ trong đời bạn.'
+        ],
         feature1_title: '100% Tự Nhiên',
         feature1_desc: 'Phân hủy hoàn toàn, không nhựa.',
         feature2_title: 'Thủ Công',
@@ -427,10 +502,27 @@ export const DATA = {
         name: 'Họ Tên',
         email: 'Email',
         message: 'Tin Nhắn',
-        submit: 'Gửi Tin Nhắn'
+        submit: 'Gửi Tin Nhắn',
+        address: 'Số 600, đường Nguyễn Văn Cừ (nối dài), Phường An Bình, Thành phố Cần Thơ'
       },
       footer: {
-        rights: '© 2024 Coffee Cycle Studio. Đã đăng ký bản quyền.'
+        rights: '© 2024 Coffee Form. Đã đăng ký bản quyền.',
+        brand_desc: 'Biến bã cà phê thành tác phẩm nghệ thuật bền vững từ năm 2024.',
+        quick_links: 'Liên Kết Nhanh',
+        resources: {
+          title: 'Tài Nguyên',
+          story: 'Câu Chuyện',
+          sustainability: 'Bền Vững',
+          blog: 'Blog',
+          faqs: 'Hỏi Đáp'
+        },
+        newsletter: {
+          title: 'Nhận Thông Tin',
+          desc: 'Đăng ký để nhận mẹo sống xanh và cập nhật mới nhất.',
+          placeholder: 'Email của bạn'
+        },
+        privacy: 'Chính Sách Bảo Mật',
+        terms: 'Điều Khoản Dịch Vụ'
       },
       product_detail: {
         not_found: 'Không tìm thấy sản phẩm',
@@ -456,7 +548,15 @@ export const DATA = {
           address: 'Địa Chỉ Nhận Hàng',
           address_placeholder: 'Số nhà, Tên đường...'
         }
-      }
+      },
+      all_products: {
+          title: 'Bộ Sưu Tập',
+          subtitle: 'Thiết kế bền vững cho cuộc sống xanh',
+          filter_all: 'Tất Cả',
+          filter_new: 'Mới Nhất',
+          filter_best: 'Bán Chạy',
+          load_more: 'Xem Thêm'
+        }
     }
   }
 };

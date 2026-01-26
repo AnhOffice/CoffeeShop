@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { DATA } from '../constants.tsx';
 import { useLanguage } from '../context/LanguageContext.tsx';
 import { useTheme } from '../context/ThemeContext.tsx';
 import { Globe, Menu, X, Moon, Sun } from 'lucide-react';
 
 const Navbar: React.FC = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const { language, toggleLanguage } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const [active, setActive] = useState<string>('home');
@@ -22,6 +25,50 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Update active state based on hash or path
+  useEffect(() => {
+    if (location.pathname === '/products') {
+      setActive('products');
+    } else if (location.pathname === '/') {
+      const sectionId = location.hash.replace('#', '') || 'home';
+      setActive(sectionId);
+    }
+  }, [location]);
+
+  const handleNavClick = (key: string) => {
+    setActive(key);
+    setIsMobileMenuOpen(false);
+
+    if (key === 'products') {
+      navigate('/products');
+      return;
+    }
+
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: key } });
+    } else {
+      const element = document.getElementById(key);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  // Handle scroll after navigation from another page
+  useEffect(() => {
+    if (location.pathname === '/' && location.state && (location.state as any).scrollTo) {
+      const key = (location.state as any).scrollTo;
+      setTimeout(() => {
+        const element = document.getElementById(key);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+      // Clear state
+      window.history.replaceState({}, document.title);
+    }
+  }, [location]);
+
   return (
     <>
       <nav 
@@ -37,19 +84,19 @@ const Navbar: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3 group">
-            <div className="relative">
+          <div onClick={() => handleNavClick('home')} className="flex items-center gap-3 group cursor-pointer">
               <div 
-                className="w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-110"
+                className="w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-110 overflow-hidden"
                 style={{
-                  background: isScrolled 
-                    ? 'linear-gradient(135deg, #2E7D32, #66BB6A)' 
-                    : 'rgba(102, 187, 106, 0.9)'
+                  background: 'white'
                 }}
               >
-                <span className="text-white text-xl font-bold">☕</span>
+                <img 
+                  src="/images/logo/LogoWeb.jpg" 
+                  alt="Coffee Form Logo" 
+                  className="w-full h-full object-cover" 
+                />
               </div>
-            </div>
             <span 
               className="text-xl md:text-2xl font-bold tracking-tight transition-all duration-300"
               style={{ 
@@ -58,18 +105,17 @@ const Navbar: React.FC = () => {
                 textShadow: isScrolled ? 'none' : '0 2px 8px rgba(0,0,0,0.5)'
               }}
             >
-              COFFEE CYCLE
+              COFFEE FORM
             </span>
-          </a>
+          </div>
           
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
             {linkKeys.map((key) => (
-              <a
+              <button
                 key={String(key)}
-                href={`#${String(key)}`}
-                onClick={() => setActive(String(key))}
-                className="relative text-sm font-bold tracking-wide uppercase transition-all duration-300 hover:scale-105"
+                onClick={() => handleNavClick(String(key))}
+                className="relative text-sm font-bold tracking-wide uppercase transition-all duration-300 hover:scale-105 bg-transparent border-none p-0 cursor-pointer"
                 style={{
                   color: active === String(key)
                     ? (isScrolled ? '#2E7D32' : '#FFFFFF')
@@ -90,7 +136,7 @@ const Navbar: React.FC = () => {
                     }}
                   />
                 )}
-              </a>
+              </button>
             ))}
             
             {/* Dark Mode Toggle */}
@@ -163,14 +209,10 @@ const Navbar: React.FC = () => {
 
           <nav className="flex flex-col gap-3 mb-8">
             {linkKeys.map((key) => (
-              <a
+              <button
                 key={String(key)}
-                href={`#${String(key)}`}
-                onClick={() => {
-                  setActive(String(key));
-                  setIsMobileMenuOpen(false);
-                }}
-                className="text-lg font-bold uppercase tracking-wide py-3 px-5 rounded-xl transition-all duration-300"
+                onClick={() => handleNavClick(String(key))}
+                className="text-lg font-bold uppercase tracking-wide py-3 px-5 rounded-xl transition-all duration-300 text-left w-full"
                 style={{
                   color: active === String(key) ? '#FFFFFF' : '#6D4C41',
                   background: active === String(key) ? 'linear-gradient(135deg, #2E7D32, #66BB6A)' : 'rgba(46, 125, 50, 0.05)',
@@ -178,7 +220,7 @@ const Navbar: React.FC = () => {
                 }}
               >
                 {navLinks[key]}
-              </a>
+              </button>
             ))}
           </nav>
 

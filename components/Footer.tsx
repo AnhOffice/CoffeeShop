@@ -19,33 +19,24 @@ const Footer: React.FC = () => {
           {/* Brand Column */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center"
-                style={{ background: 'linear-gradient(135deg, #2E7D32, #66BB6A)' }}>
-                <span className="text-white text-xl font-bold">☕</span>
+              <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden bg-white">
+                <img 
+                  src="/images/logo/LogoWeb.jpg" 
+                  alt="Coffee Form Logo" 
+                  className="w-full h-full object-cover" 
+                />
               </div>
               <span className="text-xl font-bold" style={{ fontFamily: "'Playfair Display', serif", color: '#FDFBF7' }}>
-                COFFEE CYCLE
+                COFFEE FORM
               </span>
             </div>
             <p className="text-sm mb-6" style={{ color: '#D7CCC8' }}>
-              Transforming coffee waste into sustainable art pieces since 2024.
+              {content.brand_desc}
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+              <a href="https://www.facebook.com/share/1NJwTBqBeV/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
                 style={{ background: 'rgba(102, 187, 106, 0.2)' }}>
                 <Facebook className="w-5 h-5" style={{ color: '#66BB6A' }} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-                style={{ background: 'rgba(102, 187, 106, 0.2)' }}>
-                <Instagram className="w-5 h-5" style={{ color: '#66BB6A' }} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-                style={{ background: 'rgba(102, 187, 106, 0.2)' }}>
-                <Twitter className="w-5 h-5" style={{ color: '#66BB6A' }} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-                style={{ background: 'rgba(102, 187, 106, 0.2)' }}>
-                <Mail className="w-5 h-5" style={{ color: '#66BB6A' }} />
               </a>
             </div>
           </div>
@@ -53,7 +44,7 @@ const Footer: React.FC = () => {
           {/* Quick Links */}
           <div>
             <h4 className="font-bold mb-4 text-lg" style={{ color: '#FDFBF7', fontFamily: "'Playfair Display', serif" }}>
-              Quick Links
+              {content.quick_links}
             </h4>
             <ul className="space-y-2">
               {Object.keys(navLinks).map((key) => (
@@ -70,28 +61,28 @@ const Footer: React.FC = () => {
           {/* Resources */}
           <div>
             <h4 className="font-bold mb-4 text-lg" style={{ color: '#FDFBF7', fontFamily: "'Playfair Display', serif" }}>
-              Resources
+              {content.resources.title}
             </h4>
             <ul className="space-y-2 text-sm" style={{ color: '#D7CCC8' }}>
-              <li><a href="#" className="hover:opacity-100 transition-opacity">Our Story</a></li>
-              <li><a href="#" className="hover:opacity-100 transition-opacity">Sustainability</a></li>
-              <li><a href="#" className="hover:opacity-100 transition-opacity">Blog</a></li>
-              <li><a href="#" className="hover:opacity-100 transition-opacity">FAQs</a></li>
+              <li><a href="#" className="hover:opacity-100 transition-opacity">{content.resources.story}</a></li>
+              <li><a href="#" className="hover:opacity-100 transition-opacity">{content.resources.sustainability}</a></li>
+              <li><a href="#" className="hover:opacity-100 transition-opacity">{content.resources.blog}</a></li>
+              <li><a href="#" className="hover:opacity-100 transition-opacity">{content.resources.faqs}</a></li>
             </ul>
           </div>
 
           {/* Newsletter */}
           <div>
             <h4 className="font-bold mb-4 text-lg" style={{ color: '#FDFBF7', fontFamily: "'Playfair Display', serif" }}>
-              Stay Updated
+              {content.newsletter.title}
             </h4>
             <p className="text-sm mb-4" style={{ color: '#D7CCC8' }}>
-              Subscribe to our newsletter for eco-tips and updates.
+              {content.newsletter.desc}
             </p>
             <div className="flex gap-2">
               <input
                 type="email"
-                placeholder="Your email"
+                placeholder={content.newsletter.placeholder}
                 className="flex-1 px-4 py-2 rounded-full text-sm focus:outline-none"
                 style={{ background: 'rgba(255, 255, 255, 0.1)', color: '#FDFBF7', border: '1px solid rgba(255, 255, 255, 0.2)' }}
               />
@@ -110,8 +101,8 @@ const Footer: React.FC = () => {
             {content.rights} • Made with <Heart className="w-4 h-4 fill-current" style={{ color: '#E57373' }} />
           </p>
           <div className="flex gap-6 text-sm" style={{ color: '#D7CCC8' }}>
-            <a href="#" className="hover:opacity-100 transition-opacity">Privacy Policy</a>
-            <a href="#" className="hover:opacity-100 transition-opacity">Terms of Service</a>
+            <a href="#" className="hover:opacity-100 transition-opacity">{content.privacy}</a>
+            <a href="#" className="hover:opacity-100 transition-opacity">{content.terms}</a>
           </div>
         </div>
       </div>

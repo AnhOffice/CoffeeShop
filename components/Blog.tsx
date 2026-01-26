@@ -12,24 +12,34 @@ const Blog: React.FC = () => {
 
   return (
     <section id="blog" className="py-20 md:py-24" style={{ background: '#FFFFFF' }}>
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 relative">
         <MotionWrapper>
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif", color: '#2C1810' }}>
               {content.title}
             </h2>
-            <p className="max-w-2xl mx-auto text-lg" style={{ color: '#6D4C41' }}>
+            <p className="max-w-2xl mx-auto text-lg mb-8" style={{ color: '#6D4C41' }}>
               {content.desc}
             </p>
+            
           </div>
         </MotionWrapper>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        {/* Carousel Container */}
+        <div 
+          id="blog-container"
+          className="flex overflow-x-auto gap-8 pb-12 snap-x snap-mandatory hide-scrollbar -mx-6 px-6 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden"
+          style={{ scrollBehavior: 'smooth', scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
           {posts.map((post, idx) => (
             <MotionWrapper key={post.id} delay={idx * 150}>
-              <Link to={`/blog/${post.id}`}>
-                <div className="group h-full flex flex-col rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl"
-                  style={{ background: 'linear-gradient(135deg, #FDFBF7 0%, #F5F5DC 100%)' }}>
+              <Link 
+                to={`/blog/${post.id}`}
+                className="block w-[300px] md:w-[400px] flex-shrink-0 snap-center"
+              >
+                <div className="group h-full flex flex-col rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl border border-[#D7CCC8]/30"
+                  style={{ background: '#FFFFFF' }}>
                   
                   {/* Image */}
                   <div className="relative aspect-[16/10] overflow-hidden">
@@ -42,7 +52,7 @@ const Blog: React.FC = () => {
                     
                     {/* Date Badge */}
                     <div className="absolute top-4 left-4">
-                      <div className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold"
+                      <div className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold shadow-md"
                         style={{
                           background: 'rgba(255, 255, 255, 0.95)',
                           color: '#2E7D32'
@@ -55,7 +65,7 @@ const Blog: React.FC = () => {
                   
                   {/* Content */}
                   <div className="p-6 flex-grow flex flex-col">
-                    <h3 className="text-xl font-bold mb-3 line-clamp-2" style={{ fontFamily: "'Playfair Display', serif", color: '#2C1810' }}>
+                    <h3 className="text-xl font-bold mb-3 line-clamp-2 group-hover:text-[#2E7D32] transition-colors" style={{ fontFamily: "'Playfair Display', serif", color: '#2C1810' }}>
                       {post.title}
                     </h3>
                     <p className="text-sm leading-relaxed mb-6 line-clamp-3 flex-grow" style={{ color: '#6D4C41' }}>
@@ -63,7 +73,7 @@ const Blog: React.FC = () => {
                     </p>
                     
                     {/* Read More */}
-                    <div className="flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all duration-300"
+                    <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wide group-hover:gap-3 transition-all duration-300 mt-auto pt-4 border-t border-[#EFEBE9]"
                       style={{ color: '#2E7D32' }}>
                       {content.read_more}
                       <ArrowRight className="w-4 h-4" />
@@ -73,6 +83,22 @@ const Blog: React.FC = () => {
               </Link>
             </MotionWrapper>
           ))}
+        </div>
+
+        {/* Navigation Buttons */}
+        <div className="flex justify-center gap-4 mt-4">
+          <button 
+            onClick={() => document.getElementById('blog-container')?.scrollBy({ left: -300, behavior: 'smooth' })}
+            className="p-3 rounded-full border border-[#2C1810]/20 hover:bg-[#2C1810] hover:text-white transition-all duration-300"
+          >
+            <ArrowRight className="w-6 h-6 rotate-180" />
+          </button>
+          <button 
+            onClick={() => document.getElementById('blog-container')?.scrollBy({ left: 300, behavior: 'smooth' })}
+            className="p-3 rounded-full border border-[#2C1810]/20 hover:bg-[#2C1810] hover:text-white transition-all duration-300"
+          >
+            <ArrowRight className="w-6 h-6" />
+          </button>
         </div>
       </div>
     </section>
