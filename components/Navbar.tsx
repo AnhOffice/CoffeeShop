@@ -92,7 +92,7 @@ const Navbar: React.FC = () => {
                 }}
               >
                 <img 
-                  src="/images/logo/LogoWeb.jpg" 
+                  src="images/logo/LogoWeb.jpg" 
                   alt="Coffee Form Logo" 
                   className="w-full h-full object-cover" 
                 />
