@@ -158,7 +158,7 @@ export const DATA = {
         Our team spent six months experimenting. We tried resins (too toxic), glues (too weak), and cement (too heavy). Finally, we developed a proprietary blend of natural plant starches and bio-polymers that bind the grounds into a durable, stone-like material that is 100% biodegradable.
 
         **The Impact**
-        Today, Coffee Cycle Studio has diverted over 5 tons of coffee waste from landfills. Each product you buy prevents hundreds of grams of potential methane emissions. We are not just making decor; we are reimagining the lifecycle of our daily habits.`
+        Today, Coffee Form has diverted over 5 tons of coffee waste from landfills. Each product you buy prevents hundreds of grams of potential methane emissions. We are not just making decor; we are reimagining the lifecycle of our daily habits.`
       },
       {
         id: '4',
@@ -431,7 +431,7 @@ export const DATA = {
         Đội ngũ đã dành 6 tháng ròng rã trong xưởng nhỏ. Chúng tôi thử nhựa (quá độc hại), keo hồ (quá yếu) và xi măng (quá nặng). Cuối cùng, chúng tôi tìm ra công thức độc quyền kết hợp tinh bột thực vật tự nhiên, giúp kết dính bã cà phê thành một vật liệu cứng như đá nhưng phân hủy sinh học 100%.
 
         **Tác Động**
-        Đến nay, Coffee Cycle Studio đã vinh dự chuyển hướng hơn 5 tấn bã cà phê khỏi các bãi chôn lấp. Mỗi sản phẩm bạn cầm trên tay không chỉ là một món đồ trang trí, mà là một lời cam kết về tương lai bền vững của chúng ta.`
+        Đến nay, Coffee Form đã vinh dự chuyển hướng hơn 5 tấn bã cà phê khỏi các bãi chôn lấp. Mỗi sản phẩm bạn cầm trên tay không chỉ là một món đồ trang trí, mà là một lời cam kết về tương lai bền vững của chúng ta.`
       },
       {
         id: '4',

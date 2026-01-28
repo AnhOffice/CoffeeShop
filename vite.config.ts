@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
       // Base path chỉ dùng khi build cho GitHub Pages, không dùng khi dev
-      base: mode === 'production' ? '/CoffeeShop/' : '/',
+      base: mode === 'production' ? '/CoffeeForm/' : '/',
       server: {
         port: 3000,
         host: '0.0.0.0',
