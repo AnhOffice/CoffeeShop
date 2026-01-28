@@ -13,7 +13,7 @@ import { CartProvider } from './context/CartContext.tsx';
 
 const App: React.FC = () => {
   // Basename for GitHub Pages - only in production
-  const basename = import.meta.env.MODE === 'production' ? '/CoffeeShop' : '';
+  const basename = import.meta.env.MODE === 'production' ? '/CoffeeForm' : '';
   
   return (
     <ThemeProvider>
