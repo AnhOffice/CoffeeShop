@@ -188,22 +188,39 @@ const Navbar: React.FC = () => {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button 
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2.5 rounded-lg transition-all duration-300 hover:scale-110"
-            style={{
-              background: isScrolled ? 'rgba(46, 125, 50, 0.1)' : 'rgba(255, 255, 255, 0.2)',
-              backdropFilter: 'blur(8px)'
-            }}
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" style={{ color: isScrolled ? '#2C1810' : '#FFFFFF' }} />
-            ) : (
-              <Menu className="w-6 h-6" style={{ color: isScrolled ? '#2C1810' : '#FFFFFF' }} />
-            )}
-          </button>
-        </div>
+            {/* Mobile Cart Icon */}
+            <button
+               onClick={() => navigate('/order/cart')}
+               className="lg:hidden p-2.5 rounded-full transition-all duration-300 hover:scale-110 mr-2"
+               style={{
+                 background: isScrolled ? 'rgba(46, 125, 50, 0.1)' : 'rgba(255, 255, 255, 0.2)',
+                 backdropFilter: 'blur(8px)'
+               }}
+            >
+              <ShoppingCart className="w-5 h-5" style={{ color: isScrolled ? '#2C1810' : '#FFFFFF' }} />
+              {cartCount > 0 && (
+                <span className="absolute top-1 right-1 lg:-top-1 lg:-right-1 w-4 h-4 flex items-center justify-center bg-[#D32F2F] text-white text-[10px] font-bold rounded-full border border-white">
+                  {cartCount}
+                </span>
+              )}
+            </button>
+
+            {/* Mobile Menu Button */}
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden p-2.5 rounded-lg transition-all duration-300 hover:scale-110"
+              style={{
+                background: isScrolled ? 'rgba(46, 125, 50, 0.1)' : 'rgba(255, 255, 255, 0.2)',
+                backdropFilter: 'blur(8px)'
+              }}
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" style={{ color: isScrolled ? '#2C1810' : '#FFFFFF' }} />
+              ) : (
+                <Menu className="w-6 h-6" style={{ color: isScrolled ? '#2C1810' : '#FFFFFF' }} />
+              )}
+            </button>
+          </div>
       </nav>
 
       {/* Mobile Menu */}
@@ -226,7 +243,7 @@ const Navbar: React.FC = () => {
             </button>
           </div>
 
-          <nav className="flex flex-col gap-3 mb-8">
+          <nav className="flex flex-col gap-3 mb-6">
             {linkKeys.map((key) => (
               <button
                 key={String(key)}
@@ -243,19 +260,30 @@ const Navbar: React.FC = () => {
             ))}
           </nav>
 
-          <button 
-            onClick={() => {
-              toggleLanguage();
-              setIsMobileMenuOpen(false);
-            }}
-            className="mt-auto flex items-center justify-center gap-2 px-6 py-4 rounded-full font-bold text-white shadow-lg"
-            style={{
-              background: 'linear-gradient(135deg, #2E7D32, #66BB6A)'
-            }}
-          >
-            <Globe className="w-5 h-5" />
-            <span>{language === 'vn' ? 'Switch to English' : 'Chuyển sang TV'}</span>
-          </button>
+          <div className="mt-auto space-y-4">
+             {/* Mobile Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full font-bold text-[#3E2723] transition-all bg-[#F5F5DC] hover:bg-[#EFEBE9] border border-[#D7CCC8]"
+            >
+              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              <span>{theme === 'dark' ? (language === 'vn' ? 'Chế độ Sáng' : 'Light Mode') : (language === 'vn' ? 'Chế độ Tối' : 'Dark Mode')}</span>
+            </button>
+
+            <button 
+              onClick={() => {
+                toggleLanguage();
+                setIsMobileMenuOpen(false);
+              }}
+              className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full font-bold text-white shadow-lg"
+              style={{
+                background: 'linear-gradient(135deg, #2E7D32, #66BB6A)'
+              }}
+            >
+              <Globe className="w-5 h-5" />
+              <span>{language === 'vn' ? 'Switch to English' : 'Chuyển sang TV'}</span>
+            </button>
+          </div>
         </div>
       </div>
 
