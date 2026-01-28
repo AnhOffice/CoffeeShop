@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.tsx';
 import Footer from './components/Footer.tsx';
 import Home from './components/Home.tsx';
@@ -12,14 +12,11 @@ import { ThemeProvider } from './context/ThemeContext.tsx';
 import { CartProvider } from './context/CartContext.tsx';
 
 const App: React.FC = () => {
-  // Basename for GitHub Pages - only in production
-  const basename = import.meta.env.MODE === 'production' ? '/CoffeeForm' : '';
-  
   return (
     <ThemeProvider>
       <LanguageProvider>
         <CartProvider>
-          <Router basename={basename}>
+          <Router>
         <div className="min-h-screen custom-scrollbar">
           <Navbar />
           <main>
