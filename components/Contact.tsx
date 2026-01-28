@@ -110,7 +110,7 @@ const Contact: React.FC = () => {
                     {content.phone}
                   </h4>
                   <p className="text-sm" style={{ color: '#6D4C41' }}>
-                    +84 123 456 789
+                    +84 365 039 433
                   </p>
                 </div>
               </div>
