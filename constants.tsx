@@ -29,27 +29,27 @@ export const DATA = {
     products: [
       {
         id: '1',
-        name: 'Khay The Last Drop',
-        description: 'A sculptural serving piece crafted from compressed espresso grounds.',
-        price: '1.600.000₫',
-        image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&q=80&w=800',
+        name: '"K y uc" Decorative Tray',
+        description: 'From the chaotic remnants of espresso beans, a foundation of peace is born. This tray isn\'t just a place to rest your keys or jewelry; it\'s a grounded surface that brings order to your daily scatter, keeping your treasured items safe on a bed of recycled memories.',
+        price: '$1.20',
+        image: '/images/products/product1/z7477928985292_343032d93d89c9011db8868d09e0f0c9.jpg',
         tag: 'Best Seller'
       },
       {
         id: '2',
-        name: 'Chậu Cây Mini Eco',
-        description: 'Organic textures for your favorite succulents, moisture-wicking by nature.',
-        price: '800.000₫',
-        image: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&q=80&w=800',
-        tag: '100% Recycled'
+        name: '"Suc Song" Flower Vase',
+        description: 'A vessel for life, crafted from the end of a brew. This vase holds the contrast of dark, roasted earth and vibrant, blooming petals. It whispers a story of cycles—where the old nurtures the new, standing quietly as a testament to nature\'s resilience on your windowsill.',
+        price: '$1.20',
+        image: '/images/products/product2/z7477933309525_9b8d8e56f6ba63ec270ad1bbc39c2d34.jpg',
+        tag: 'New Arrival'
       },
       {
         id: '3',
-        name: 'Hộp Đựng Bút First Sip',
-        description: 'Minimalist desk organization with a subtle aroma of roasted beans.',
-        price: '700.000₫',
-        image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&q=80&w=800',
-        tag: 'Sustainable'
+        name: '"Y Tuong" Pen Holder',
+        description: 'Guardians of your greatest ideas. This pen holder stands firm with the density of compressed grounds, grounding your workspace. Every time you reach for a pen, feel the texture of transformed waste, inspiring you to create something meaningful from the blank page before you.',
+        price: '$1.20',
+        image: '/images/products/product3/z7477934239723_c75ae7976c2926fb6d5d1865bb227cce.jpg',
+        tag: 'Eco Choice'
       }
     ],
     team: [
@@ -226,15 +226,15 @@ export const DATA = {
         philosophy: 'Our Philosophy',
         title: 'COFFEEFORM – From Cup to Corner',
         story: [
-          'Every day, after bringing joy in morning coffees, kilograms of coffee grounds quietly end their journey in the trash — unremembered, unkept.',
+          'Every day, after bringing joy in morning coffees, kilograms of coffee grounds quietly end their journey in the trash, unremembered, unkept.',
           'COFFEEFORM started from the moment five female students stood in front of those bags of coffee grounds and wondered: "Why must the memory of coffee end here?"',
           'No capital. No business experience. No factory.',
           'We only had clumsy hands and a very simple belief: everything deserves a second chance.',
-          'We went to each coffee shop to collect discarded grounds. Washing, drying, grinding, and mixing each batch by hand. We poured every mold, sanded every edge, accepting even the cracks — for they are traces of a saved journey, not defects.',
+          'We went to each coffee shop to collect discarded grounds. Washing, drying, grinding, and mixing each batch by hand. We poured every mold, sanded every edge, accepting even the cracks, for they are traces of a saved journey, not defects.',
           'From seemingly useless things, pen pots, jewelry trays, and small planters gradually came to life. Each product bears the natural brown color of coffee, no surface alike, holding within a past once forgotten.',
           'COFFEEFORM does not merely create products. We keep the memory of coffee and give it a new life in your living space.',
-          'When you hold a COFFEEFORM product, it is not just a decor item. It is a piece of coffee once abandoned — kept by you, given life by you once more.',
-          'COFFEEFORM does not want to change the world. We just want to change how you look at small things — from a morning coffee to a small corner in your life.'
+          'When you hold a COFFEEFORM product, it is not just a decor item. It is a piece of coffee once abandoned, kept by you, given life by you once more.',
+          'COFFEEFORM does not want to change the world. We just want to change how you look at small things, from a morning coffee to a small corner in your life.'
         ],
         feature1_title: '100% Natural',
         feature1_desc: 'Fully biodegradable, plastic-free.',
@@ -294,7 +294,7 @@ export const DATA = {
         back_home: 'Return Home',
         back_collection: 'Back to Collection',
         reviews: 'reviews',
-        warranty: '2 Year Warranty',
+        warranty: '1 Year Warranty',
         shipping: 'Free Shipping',
         order_now: 'Order Now',
         quantity: 'Quantity',
@@ -338,27 +338,27 @@ export const DATA = {
     products: [
       {
         id: '1',
-        name: 'Khay The Last Drop',
-        description: 'Một tác phẩm điêu khắc phục vụ được chế tác từ bã cà phê nén.',
-        price: '1.600.000₫',
-        image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&q=80&w=800',
+        name: 'Khay Trang Trí "Ký Ức"',
+        description: 'Từ những hạt cà phê hỗn độn còn sót lại, một nền tảng của sự bình yên được sinh ra. Chiếc khay này không chỉ là nơi đặt chìa khóa hay trang sức, mà là một điểm tựa mang lại trật tự cho những bộn bề hàng ngày, giữ gìn những vật dụng thân thuộc trên nền ký ức được tái sinh.',
+        price: '30.000₫',
+        image: '/images/products/product1/z7477928985292_343032d93d89c9011db8868d09e0f0c9.jpg',
         tag: 'Bán chạy nhất'
       },
       {
         id: '2',
-        name: 'Chậu Cây Mini Eco',
-        description: 'Kết cấu hữu cơ cho các loại cây mọng nước yêu thích của bạn, có khả năng hút ẩm tự nhiên.',
-        price: '800.000₫',
-        image: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&q=80&w=800',
-        tag: '100% Tái chế'
+        name: 'Bình Cắm Hoa "Sức Sống"',
+        description: 'Một chiếc bình chứa đựng sự sống, được chế tác từ điểm kết thúc của những giọt cà phê. Chiếc bình này ôm trọn sự tương phản giữa đất mẹ nâu trầm và những cánh hoa rực rỡ. Nó thì thầm câu chuyện về những vòng lặp—nơi cái cũ nuôi dưỡng cái mới, lặng lẽ đứng đó như một minh chứng cho sức sống bền bỉ bên khung cửa sổ.',
+        price: '30.000₫',
+        image: '/images/products/product2/z7477933309525_9b8d8e56f6ba63ec270ad1bbc39c2d34.jpg',
+        tag: 'Sản phẩm mới'
       },
       {
         id: '3',
-        name: 'Hộp Đựng Bút First Sip',
-        description: 'Tổ chức bàn làm việc tối giản với hương thơm thoang thoảng của hạt cà phê rang.',
-        price: '700.000₫',
-        image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&q=80&w=800',
-        tag: 'Bền vững'
+        name: 'Lọ Đựng Bút "Ý Tưởng"',
+        description: 'Người gác đền cho những ý tưởng tuyệt vời nhất của bạn. Lọ đựng bút này đứng vững chãi với kết cấu từ bã cà phê nén, làm điểm tựa cho không gian làm việc. Mỗi khi bạn với lấy cây bút, hãy cảm nhận chất liệu của sự tái sinh, truyền cảm hứng để bạn kiến tạo nên những điều ý nghĩa từ trang giấy trắng.',
+        price: '30.000₫',
+        image: '/images/products/product3/z7477934239723_c75ae7976c2926fb6d5d1865bb227cce.jpg',
+        tag: 'Lựa chọn xanh'
       }
     ],
     team: [
@@ -535,15 +535,15 @@ export const DATA = {
         philosophy: 'Triết Lý Của Chúng Tôi',
         title: 'COFFEEFORM – From Cup to Corner',
         story: [
-          'Mỗi ngày, sau khi mang lại niềm vui trong những ly cà phê buổi sáng, hàng ký bã cà phê lặng lẽ kết thúc hành trình của mình trong thùng rác — không được nhớ đến, không được giữ lại.',
+          'Mỗi ngày, sau khi mang lại niềm vui trong những ly cà phê buổi sáng, hàng ký bã cà phê lặng lẽ kết thúc hành trình của mình trong thùng rác, không được nhớ đến, không được giữ lại.',
           'COFFEEFORM bắt đầu từ khoảnh khắc năm cô gái sinh viên đứng trước những túi bã cà phê ấy và tự hỏi: "Tại sao ký ức của cà phê lại phải kết thúc ở đây?"',
           'Không vốn. Không kinh nghiệm kinh doanh. Không nhà xưởng.',
           'Chúng tôi chỉ có những đôi tay còn vụng về và một niềm tin rất giản dị: mọi thứ đều xứng đáng có một cơ hội thứ hai.',
-          'Chúng tôi đi từng quán cà phê để xin lại những túi bã bị bỏ đi. Rửa sạch, sấy khô, nghiền mịn và trộn từng mẻ vật liệu bằng tay. Chúng tôi đổ từng khuôn, mài từng cạnh, chấp nhận cả những vết nứt — bởi đó là dấu vết của một hành trình được cứu sống, không phải là khuyết điểm.',
+          'Chúng tôi đi từng quán cà phê để xin lại những túi bã bị bỏ đi. Rửa sạch, sấy khô, nghiền mịn và trộn từng mẻ vật liệu bằng tay. Chúng tôi đổ từng khuôn, mài từng cạnh, chấp nhận cả những vết nứt, bởi đó là dấu vết của một hành trình được cứu sống, không phải là khuyết điểm.',
           'Từ những thứ tưởng chừng vô dụng ấy, những chiếc chậu bút, khay trang sức, chậu hoa nhỏ dần ra đời. Mỗi sản phẩm mang màu nâu tự nhiên của cà phê, bề mặt không cái nào giống cái nào, và trong mình một quá khứ đã từng bị lãng quên.',
           'COFFEEFORM không đơn thuần tạo ra sản phẩm. Chúng tôi giữ lại ký ức của cà phê và trao cho nó một cuộc đời mới trong không gian sống của bạn.',
-          'Khi bạn cầm trên tay một sản phẩm COFFEEFORM, đó không chỉ là một món đồ decor. Đó là một phần cà phê từng bị bỏ rơi — được bạn giữ lại, được bạn cho sống thêm một lần nữa.',
-          'COFFEEFORM không muốn thay đổi thế giới. Chúng tôi chỉ muốn thay đổi cách bạn nhìn vào những điều nhỏ bé — từ một ly cà phê buổi sáng, đến một góc nhỏ trong đời bạn.'
+          'Khi bạn cầm trên tay một sản phẩm COFFEEFORM, đó không chỉ là một món đồ decor. Đó là một phần cà phê từng bị bỏ rơi, được bạn giữ lại, được bạn cho sống thêm một lần nữa.',
+          'COFFEEFORM không muốn thay đổi thế giới. Chúng tôi chỉ muốn thay đổi cách bạn nhìn vào những điều nhỏ bé, từ một ly cà phê buổi sáng, đến một góc nhỏ trong đời bạn.'
         ],
         feature1_title: '100% Tự Nhiên',
         feature1_desc: 'Phân hủy hoàn toàn, không nhựa.',
@@ -603,7 +603,7 @@ export const DATA = {
         back_home: 'Quay lại Trang Chủ',
         back_collection: 'Quay lại Bộ Sưu Tập',
         reviews: 'đánh giá',
-        warranty: 'Bảo Hành 2 Năm',
+        warranty: 'Bảo Hành 1 Năm',
         shipping: 'Miễn Phí Vận Chuyển',
         order_now: 'Đặt Hàng Ngay',
         quantity: 'Số lượng',

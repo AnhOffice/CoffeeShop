@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { DATA } from '../constants.tsx';
 import { useLanguage } from '../context/LanguageContext.tsx';
@@ -7,6 +7,7 @@ import MotionWrapper from './MotionWrapper.tsx';
 
 const BlogDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
   const { language } = useLanguage();
   const posts = DATA[language].blog;
   const content = DATA[language].ui.product_detail; // reuse text like "back_home" or similar
@@ -34,13 +35,13 @@ const BlogDetail: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#F5F5DC]/20 pt-24 pb-12">
       <div className="max-w-4xl mx-auto px-8">
-        <Link 
-          to="/" 
+        <button 
+          onClick={() => navigate(-1)}
           className="inline-flex items-center gap-2 text-[#3E2723] font-medium mb-8 hover:text-[#81C784] transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           {DATA[language].ui.product_detail.back_home}
-        </Link>
+        </button>
 
         <MotionWrapper>
           <div className="relative aspect-video rounded-3xl overflow-hidden shadow-xl mb-12">

@@ -45,7 +45,7 @@ const Products: React.FC = () => {
                   style={{ background: 'linear-gradient(135deg, #FDFBF7 0%, #F5F5DC 100%)' }}>
                   
                   {/* Image Container */}
-                  <div className="relative aspect-[4/5] overflow-hidden">
+                  <div className="relative aspect-[3/4] overflow-hidden">
                     <img 
                       src={product.image} 
                       alt={product.name}

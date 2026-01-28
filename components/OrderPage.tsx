@@ -9,10 +9,32 @@ import MotionWrapper from './MotionWrapper.tsx';
 
 const OrderPage: React.FC = () => {
   const { language } = useLanguage();
-  const { cart, updateQuantity, removeFromCart, totalAmount, cartCount, clearCart } = useCart();
+  const { cart, updateQuantity, removeFromCart, cartCount, clearCart } = useCart();
   const content = DATA[language].ui.order_page;
   const navigate = useNavigate();
   const [orderSuccess, setOrderSuccess] = useState(false);
+
+  // Calculate total locally to match current language price
+  const calculateTotal = () => {
+    return cart.reduce((acc, item) => {
+      // Find current product info (price) based on language
+      const product = DATA[language].products.find(p => p.id === item.id);
+      if (!product) return acc;
+      
+      let price = 0;
+      if (language === 'vn') {
+        // Parse "30.000₫" -> 30000
+        price = parseInt(product.price.replace(/\./g, '').replace('₫', ''));
+      } else {
+        // Parse "$1.20" -> 1.20
+        price = parseFloat(product.price.replace('$', ''));
+      }
+      
+      return acc + (price * item.quantity);
+    }, 0);
+  };
+
+  const currentTotal = calculateTotal();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -40,13 +62,13 @@ const OrderPage: React.FC = () => {
     <div className="min-h-screen bg-[#F5F5DC]/20 pt-24 pb-12">
       <div className="max-w-4xl mx-auto px-4 md:px-8">
         {!orderSuccess && (
-          <Link 
-            to="/products"
+          <button 
+            onClick={() => navigate(-1)}
             className="inline-flex items-center gap-2 text-[#3E2723] font-medium mb-8 hover:text-[#81C784] transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             {content.back_product}
-          </Link>
+          </button>
         )}
 
         {!orderSuccess && cart.map((item, index) => (
@@ -71,7 +93,10 @@ const OrderPage: React.FC = () => {
                 </div>
                 
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                  <p className="text-[#81C784] font-medium">{item.price}</p>
+                  <p className="text-[#81C784] font-medium">
+                    {/* Display price based on current language */}
+                    {DATA[language].products.find(p => p.id === item.id)?.price || item.price}
+                  </p>
                   
                   <div className="flex items-center justify-between md:justify-end gap-6 bg-[#F5F5DC]/50 rounded-lg p-2 md:p-0 md:bg-transparent">
                     <span className="md:hidden text-sm font-medium text-[#3E2723]/70">{language === 'vn' ? 'Số lượng:' : 'Quantity:'}</span>
@@ -104,7 +129,12 @@ const OrderPage: React.FC = () => {
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-[#F5F5DC] mb-8">
               <div className="flex items-center justify-between">
                 <span className="text-xl font-bold text-[#3E2723]">{language === 'vn' ? 'Tổng Thanh Toán:' : 'Total Amount:'}</span>
-                <span className="text-2xl font-bold text-[#2E7D32]">{totalAmount.toLocaleString('vi-VN')}₫</span>
+                <span className="text-2xl font-bold text-[#2E7D32]">
+                  {language === 'vn' 
+                    ? `${currentTotal.toLocaleString('vi-VN')}₫`
+                    : `$${currentTotal.toFixed(2)}`
+                  }
+                </span>
               </div>
             </div>
           </MotionWrapper>

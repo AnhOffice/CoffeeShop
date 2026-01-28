@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Star, Shield, Truck } from 'lucide-react';
 import { DATA } from '../constants.tsx';
 import { useLanguage } from '../context/LanguageContext.tsx';
@@ -9,6 +9,7 @@ import MotionWrapper from './MotionWrapper.tsx';
 
 const ProductDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
   const { language } = useLanguage();
   const { addToCart } = useCart();
   const products = DATA[language].products;
@@ -35,18 +36,18 @@ const ProductDetail: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#F5F5DC]/20 pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-8">
-        <Link 
-          to="/" 
+        <button 
+          onClick={() => navigate(-1)}
           className="inline-flex items-center gap-2 text-[#3E2723] font-medium mb-8 hover:text-[#81C784] transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           {content.back_collection}
-        </Link>
+        </button>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-20">
           {/* Product Image */}
           <MotionWrapper>
-            <div className="relative aspect-square rounded-3xl overflow-hidden shadow-xl">
+            <div className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-xl">
               <img 
                 src={product.image} 
                 alt={product.name}
@@ -70,12 +71,7 @@ const ProductDetail: React.FC = () => {
                 {product.price}
               </p>
               
-              <div className="flex items-center gap-1 mb-8">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-[#3E2723] text-[#3E2723]" />
-                ))}
-                <span className="ml-2 text-sm text-[#3E2723]/60">(128 {content.reviews})</span>
-              </div>
+
 
               <p className="text-lg text-[#3E2723]/70 leading-relaxed mb-8">
                 {product.description}
