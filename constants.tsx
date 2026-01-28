@@ -2,6 +2,8 @@ import React from 'react';
 import { Leaf, Recycle, Heart, Droplet } from 'lucide-react';
 import { Product, TeamMember } from './types.ts';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 export const COLORS = {
   COFFEE_BROWN: '#3E2723',
   SAND_BEIGE: '#F5F5DC',
@@ -32,7 +34,7 @@ export const DATA = {
         name: '"K y uc" Decorative Tray',
         description: 'From the chaotic remnants of espresso beans, a foundation of peace is born. This tray isn\'t just a place to rest your keys or jewelry; it\'s a grounded surface that brings order to your daily scatter, keeping your treasured items safe on a bed of recycled memories.',
         price: '$1.20',
-        image: '/images/products/product1/z7477928985292_343032d93d89c9011db8868d09e0f0c9.jpg',
+        image: `${BASE_URL}images/products/product1/z7477928985292_343032d93d89c9011db8868d09e0f0c9.jpg`,
         tag: 'Best Seller'
       },
       {
@@ -40,7 +42,7 @@ export const DATA = {
         name: '"Suc Song" Flower Vase',
         description: 'A vessel for life, crafted from the end of a brew. This vase holds the contrast of dark, roasted earth and vibrant, blooming petals. It whispers a story of cycles—where the old nurtures the new, standing quietly as a testament to nature\'s resilience on your windowsill.',
         price: '$1.20',
-        image: '/images/products/product2/z7477933309525_9b8d8e56f6ba63ec270ad1bbc39c2d34.jpg',
+        image: `${BASE_URL}images/products/product2/z7477933309525_9b8d8e56f6ba63ec270ad1bbc39c2d34.jpg`,
         tag: 'New Arrival'
       },
       {
@@ -48,7 +50,7 @@ export const DATA = {
         name: '"Y Tuong" Pen Holder',
         description: 'Guardians of your greatest ideas. This pen holder stands firm with the density of compressed grounds, grounding your workspace. Every time you reach for a pen, feel the texture of transformed waste, inspiring you to create something meaningful from the blank page before you.',
         price: '$1.20',
-        image: '/images/products/product3/z7477934239723_c75ae7976c2926fb6d5d1865bb227cce.jpg',
+        image: `${BASE_URL}images/products/product3/z7477934239723_c75ae7976c2926fb6d5d1865bb227cce.jpg`,
         tag: 'Eco Choice'
       }
     ],
@@ -57,35 +59,35 @@ export const DATA = {
         id: '1',
         name: 'Văn Quế Hương',
         role: 'Chief Executive Officer',
-        image: 'images/team/QueHuong.jpg',
+        image: `${BASE_URL}images/team/QueHuong.jpg`,
         bio: 'Responsible for managing and organizing overall project operations. Supports team members, monitors work progress, and ensures tasks are executed according to the established plan.'
       },
       {
         id: '2',
         name: 'Trần Thị Tuyết Mai',
         role: 'Product Director',
-        image: 'images/team/TuyetMai.jpg',
+        image: `${BASE_URL}images/team/TuyetMai.jpg`,
         bio: 'Responsible for building and refining project products. Participates in monitoring implementation process, evaluating and proposing adjustments to ensure products meet user needs.'
       },
       {
         id: '3',
         name: 'Nguyễn Thị Phương Nghi',
         role: 'Marketing Director',
-        image: 'images/team/PhuongNghi.jpg',
+        image: `${BASE_URL}images/team/PhuongNghi.jpg`,
         bio: 'Responsible for developing and implementing communication activities for the project. Creates content ideas, manages communication channels and supports brand image promotion.'
       },
       {
         id: '4',
         name: 'Trần Thị Mỹ Hiền',
         role: 'Business Director',
-        image: 'images/team/MyHien.jpg',
+        image: `${BASE_URL}images/team/MyHien.jpg`,
         bio: 'Responsible for market research and customer connection support. Monitors business performance and proposes improvement solutions aligned with team objectives.'
       },
       {
         id: '5',
         name: 'Lương Thị Tố Tố',
         role: 'Finance Director',
-        image: 'images/team/ToTo.jpg',
+        image: `${BASE_URL}images/team/ToTo.jpg`,
         bio: 'Responsible for budget management, cost monitoring and financial planning support for the project. Ensures that revenues and expenses are controlled and used appropriately.'
       }
     ],
@@ -341,7 +343,7 @@ export const DATA = {
         name: 'Khay Trang Trí "Ký Ức"',
         description: 'Từ những hạt cà phê hỗn độn còn sót lại, một nền tảng của sự bình yên được sinh ra. Chiếc khay này không chỉ là nơi đặt chìa khóa hay trang sức, mà là một điểm tựa mang lại trật tự cho những bộn bề hàng ngày, giữ gìn những vật dụng thân thuộc trên nền ký ức được tái sinh.',
         price: '30.000₫',
-        image: '/images/products/product1/z7477928985292_343032d93d89c9011db8868d09e0f0c9.jpg',
+        image: `${BASE_URL}images/products/product1/z7477928985292_343032d93d89c9011db8868d09e0f0c9.jpg`,
         tag: 'Bán chạy nhất'
       },
       {
@@ -349,7 +351,7 @@ export const DATA = {
         name: 'Bình Cắm Hoa "Sức Sống"',
         description: 'Một chiếc bình chứa đựng sự sống, được chế tác từ điểm kết thúc của những giọt cà phê. Chiếc bình này ôm trọn sự tương phản giữa đất mẹ nâu trầm và những cánh hoa rực rỡ. Nó thì thầm câu chuyện về những vòng lặp—nơi cái cũ nuôi dưỡng cái mới, lặng lẽ đứng đó như một minh chứng cho sức sống bền bỉ bên khung cửa sổ.',
         price: '30.000₫',
-        image: '/images/products/product2/z7477933309525_9b8d8e56f6ba63ec270ad1bbc39c2d34.jpg',
+        image: `${BASE_URL}images/products/product2/z7477933309525_9b8d8e56f6ba63ec270ad1bbc39c2d34.jpg`,
         tag: 'Sản phẩm mới'
       },
       {
@@ -357,7 +359,7 @@ export const DATA = {
         name: 'Lọ Đựng Bút "Ý Tưởng"',
         description: 'Người gác đền cho những ý tưởng tuyệt vời nhất của bạn. Lọ đựng bút này đứng vững chãi với kết cấu từ bã cà phê nén, làm điểm tựa cho không gian làm việc. Mỗi khi bạn với lấy cây bút, hãy cảm nhận chất liệu của sự tái sinh, truyền cảm hứng để bạn kiến tạo nên những điều ý nghĩa từ trang giấy trắng.',
         price: '30.000₫',
-        image: '/images/products/product3/z7477934239723_c75ae7976c2926fb6d5d1865bb227cce.jpg',
+        image: `${BASE_URL}images/products/product3/z7477934239723_c75ae7976c2926fb6d5d1865bb227cce.jpg`,
         tag: 'Lựa chọn xanh'
       }
     ],
@@ -366,35 +368,35 @@ export const DATA = {
         id: '1',
         name: 'Văn Quế Hương',
         role: 'GIÁM ĐỐC ĐIỀU HÀNH',
-        image: 'images/team/QueHuong.jpg',
+        image: `${BASE_URL}images/team/QueHuong.jpg`,
         bio: 'Phụ trách điều hành và tổ chức hoạt động chung của dự án. Hỗ trợ các thành viên trong nhóm, theo dõi tiến độ công việc và đảm bảo các nhiệm vụ được thực hiện đúng kế hoạch đã đề ra.'
       },
       {
         id: '2',
         name: 'Trần Thị Tuyết Mai',
         role: 'GIÁM ĐỐC SẢN PHẨM',
-        image: 'images/team/TuyetMai.jpg',
+        image: `${BASE_URL}images/team/TuyetMai.jpg`,
         bio: 'Phụ trách xây dựng và hoàn thiện sản phẩm của dự án. Tham gia theo dõi quá trình thực hiện, đánh giá và đề xuất điều chỉnh để sản phẩm phù hợp với nhu cầu sử dụng.'
       },
       {
         id: '3',
         name: 'Nguyễn Thị Phương Nghi',
         role: 'GIÁM ĐỐC TIẾP THỊ',
-        image: 'images/team/PhuongNghi.jpg',
+        image: `${BASE_URL}images/team/PhuongNghi.jpg`,
         bio: 'Phụ trách xây dựng và triển khai các hoạt động truyền thông cho dự án. Lên ý tưởng nội dung, quản lý các kênh truyền thông và hỗ trợ quảng bá hình ảnh thương hiệu.'
       },
       {
         id: '4',
         name: 'Trần Thị Mỹ Hiền',
         role: 'GIÁM ĐỐC KINH DOANH',
-        image: 'images/team/MyHien.jpg',
+        image: `${BASE_URL}images/team/MyHien.jpg`,
         bio: 'Phụ trách nghiên cứu thị trường và hỗ trợ kết nối khách hàng, theo dõi hiệu quả hoạt động kinh doanh và đề xuất giải pháp cải thiện phù hợp với mục tiêu của nhóm.'
       },
       {
         id: '5',
         name: 'Lương Thị Tố Tố',
         role: 'GIÁM ĐỐC TÀI CHÍNH',
-        image: 'images/team/ToTo.jpg',
+        image: `${BASE_URL}images/team/ToTo.jpg`,
         bio: 'Phụ trách quản lý ngân sách, theo dõi chi phí và hỗ trợ lập kế hoạch tài chính cho dự án. Đảm bảo các khoản thu chi được kiểm soát và sử dụng hợp lý.'
       }
     ],

@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden bg-white">
                 <img 
-                  src="images/logo/LogoWeb.jpg" 
+                  src={`${import.meta.env.BASE_URL}images/logo/LogoWeb.jpg`} 
                   alt="Coffee Form Logo" 
                   className="w-full h-full object-cover" 
                 />
